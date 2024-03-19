@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { ImageBackground } from 'react-native'
 
-export default function ProfileScreen() {
+export default function FavouriteScreen() {
   return (
     <View>
       <ImageBackground source={require('./../../../assets/images/login-bg.png')}
@@ -10,7 +10,7 @@ export default function ProfileScreen() {
             justifyContent:'center',
             alignItems:'center',}}
         >
-      <Text>profile</Text>
+      <Text>Profile Placeholder</Text>
       </ImageBackground>
     </View>
   )

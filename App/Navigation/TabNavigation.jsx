@@ -2,8 +2,8 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../Screen/HomeScreen/HomeScreen';
-import FavouriteScreen from '../Screen/FavouriteScreen/FavouriteScreen';
-import ProfileScreen from '../Screen/ProfileScreen/ProfileScreen';
+import FavouriteScreen from '../Screen/ProfileScreen/ProfileScreen';
+import ProfileScreen from '../Screen/FaqScreen/FaqScreen';
 import { Ionicons } from '@expo/vector-icons';
 import Colours from '../Utils/Colours';
 import { BlurView } from 'expo-blur';
