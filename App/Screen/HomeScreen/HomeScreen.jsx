@@ -38,7 +38,7 @@ export default function HomeScreen() {
   return (
     <View>
       <View style={styles.headerContainer}>
-        <Header />
+        {/* <Header /> */}
         <SearchBar searchedLocation={(location) => console.log(location)} />
       </View>
       <AppMapView />
