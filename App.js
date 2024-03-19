@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
-import { useCallback , useEffect, useState} from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import LoginScreen from './App/Screen/LoginScreen/LoginScreen';
 import { User, getAuth, onAuthStateChanged } from 'firebase/auth';
 import { FIREBASE_AUTH } from './src/firebase/config';
@@ -29,17 +29,19 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+  //fonts
   const [fontsLoaded, fontError] = useFonts({
     'Inter-Bold': require('./assets/fonts/Inter-Bold.ttf'),
     'Inter-Regular': require('./assets/fonts/Inter-Regular.ttf'),
     'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.ttf'),
   });
+
   const [location, setLocation] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
     (async () => {
-      
+
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
         setErrorMsg('Permission to access location was denied');
@@ -59,7 +61,7 @@ function App() {
   }
 
   return (
-    <UserLocationContext.Provider value={{location,setLocation}}>
+    <UserLocationContext.Provider value={{ location, setLocation }}>
       <NavigationContainer>
         {user ? (
           <TabNavigation>
@@ -74,5 +76,4 @@ function App() {
     </UserLocationContext.Provider>
   );
 }
-
 export default App;
